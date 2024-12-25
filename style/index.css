@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: darkslategray;
+  color: gold;
+  margin: 0;
+  padding: 20px;
+}
+
+.tree {
+  display: inline-block;
+  text-align: center;
+}
+
+.tree .star {
+  color: gold;
+  font-size: 24px;
+}
+
+.tree .layer {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tree .layer:nth-child(2n) {
+  color: red;
+}
+
+.tree .trunk {
+  color: brown;
+  font-size: 18px;
+}
+
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0.2;
+  }
+}
